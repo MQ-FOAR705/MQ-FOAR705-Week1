@@ -1,4 +1,6 @@
-A presentation delivered on 27 May 2019 to the ADRs and ADHDRs at Macquarie University to provide context for the release of a draft version of the research data governance documents and text for a RDM planning process.
+Week 1 slides for FOAR 705 at Macquarie University. 2019.
+
+License: CC-BY 4.0 International. Shawn Ross, Brian Ballsun-Stanton, Macquarie University
 
 LaTeX template:
 
