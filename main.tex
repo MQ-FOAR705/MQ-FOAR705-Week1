@@ -1,0 +1,205 @@
+% Latex template: https://github.com/mqTeXUsers/Macquarie-University-Beamer-Theme
+
+% Slide Masters:
+
+% Title
+% Text
+% 2 column
+% Full-image
+% Bibliography
+% Closing
+ 
+\documentclass[aspectratio=169, 11pt]{beamer} % Aspect ratio
+% https://tex.stackexchange.com/a/14339/5483 
+% Possible values: 1610, 169, 149, 54, 43 and 32.
+% 169 = 16:9
+
+\PassOptionsToPackage{table}{xcolor}    %https://tex.stackexchange.com/a/5365/5483
+
+\usetheme{macquarie}
+\usepackage{multicol} % https://tex.stackexchange.com/a/396018/5483
+\usepackage{xurl}
+\usepackage[british]{babel}       % Set language
+% \usepackage[utf8x]{inputenc}      % Set encoding
+\usepackage{colortbl}
+\mode<presentation>           % Set options
+{
+  \usetheme{default}          % Set theme
+  \usecolortheme{default}         % Set colors
+  \usefonttheme{default}          % Set font theme
+  \setbeamertemplate{caption}[numbered] % Set caption to be numbered
+}
+
+% Uncomment this to have the outline at the beginning of each section highlighted.
+%\AtBeginSection[]
+%{
+%  \begin{frame}{Outline}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+
+\usepackage{graphicx}         % For including figures
+\usepackage{booktabs}         % For table rules
+\usepackage{hyperref}         % For cross-referencing
+
+
+\usepackage{enumitem} % https://tex.stackexchange.com/a/2292/5483
+
+%https://tex.stackexchange.com/a/371844/5483
+\setbeamerfont{bibliography entry author}{size=\tiny}
+\setbeamerfont{bibliography entry title}{size=\tiny}
+\setbeamerfont{bibliography entry location}{size=\tiny}
+\setbeamerfont{bibliography entry note}{size=\tiny}
+\setbeamerfont{bibliography item}{size=\tiny}
+
+%https://tex.stackexchange.com/q/333587/5483
+%TODO SHAWN REPLACE OSF URL
+%\setbeamertemplate{footline}{\strut~\texttt{https://osf.io/v5jp7/}\hfill\insertframen%umber~/~\inserttotalframenumber\strut~~~}
+
+\title{FOAR705 Digital Methods} % Presentation title
+\author{Shawn A Ross | Brian Ballsun-Stanton | Kathryn Elliot}               % Presentation author
+\institute{Faculty of Arts}         % Author affiliation
+\date{Friday 02 August 2019}                 % Today's date  
+\begin{document}
+
+% Title page
+% This page includes the informations defined earlier including title, author/s, affiliation/s and the date
+% \begin{frame}[noframenumbering]
+
+\maketitle
+
+  
+% \end{frame}
+
+% Outline
+% This page includes the outline (Table of content) of the presentation. All sections and subsections will appear in the outline by default.
+\begin{frame}{The context of Research Data Management}
+  \tableofcontents
+\end{frame}
+
+% The following is the most frequently used slide types in beamer
+% The slide structure is as follows:
+%
+%\begin{frame}{<slide-title>}
+% <content>
+%\end{frame}
+
+
+
+
+% Presentation providing context for the new data governance policies and procedures at Macquarie University
+
+\section{Expectations}
+
+\begin{frame}{Is the content 'too hard'?}
+ 'I still have my concerns about how over-technical this course is given it is now meant to be taken by students from across the entire Faculty from diverse backgrounds and with diverse interests...I suspect will cause students anxiety and maybe lead to drop out.'
+    \begin{itemize}[label=\textbullet]
+        \item Before we start, what was your reaction to reading the Unit description?
+        \item Do you agree with the quote above?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Expectations and workload}
+  You are undertaking an Masters of Research at a top one-percent university (QS ranking 125 in Arts and Humanities, 202 in Social Sciences). Expectations and workload higher than what you are accustomed to.
+    \begin{itemize}[label=\textbullet]
+        \item Expect a workload of six hours per week outside of class to earn a DN or HD.
+        \item Avoid missing classes. If you do, expect to spend four hours to catch up.
+        \item If you want to continue to a PhD you need to maintain a DN or HD average.
+        \item Both of us have taught internationally, and know what it takes to compete against those who have done postgraduate work in the US or Europe.
+        \item Considering the academic job market, competition is fierce.
+        \item Most of you will not get academic jobs, so transferable skills are crucial.
+        \item It is our job to prepare you for this environment, and yours to make yourself competitive.
+    \end{itemize}
+\end{frame}
+
+\section{Don't panic!}
+
+\begin{frame}{Data Carpentry: a proven approach}
+    `Building communities teaching universal data literacy' %link to https://datacarpentry.org/mission/ 
+       
+    `Data Carpentry trains researchers in the core data skills for efficient, shareable, and reproducible research practices. We run accessible, inclusive training workshops; teach openly available, high-quality, domain-tailored lessons; and foster an active, inclusive, diverse instructor community that promotes and models reproducible research as a community norm.'
+
+    `Since 1998, Software Carpentry has been teaching researchers the computing skills they need to get more done in less time and with less pain. Our volunteer instructors have run hundreds of events for more than 34,000 researchers since 2012.'
+\end{frame}
+
+\begin{frame}{Data Carpentry: widely used worldwide in HASS}
+    Carpentries training is used all over the world to teach digital literacy and computational thinking to Humanities and Social Sciences students and researchers.
+    \begin{itemize}[label=\textbullet]
+        \item Digital Humanities at Oxford Summer School
+        \item CODATA-RDA School of Research Data Science
+        \item Australian Research Data Cloud training
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Data Carpentry: used at Macquarie}
+  Other MRes students at this university have successfully undergone DC training:
+    \begin{itemize}[label=\textbullet]
+        \item BIOL703 Research Skills for Biology
+        \item No excess attrition, high student satisfaction, good feedback
+        \item Nominated for a Vice-Chancellor's Learning and Teaching award
+        \item Is the background or needs of Arts students that different from ecology, biology, environmental sciences, and related fields?
+    \end{itemize}
+\end{frame}
+
+\section{What, and why?}
+
+\begin{frame}{Digital literacy: creators, not consumers}
+
+%insert 'Program or be programmed' book cover image, and link to 'An unexpected ass kicking' %https://rushkoff.com/books/program-or-be-programmed/
+%https://impossiblehq.com/an-unexpected-ass-kicking/
+
+\end{frame}
+
+\begin{frame}{Computational thinking: what can you do with a computer?}
+
+%insert https://www.cs.cmu.edu/~CompThink/images/ctc-w2b.jpg
+%caption: 'To flourish in today's world, computational thinking has to be a fundamental part of the way people think and understand the world.' https://www.cs.cmu.edu/~CompThink/
+
+\end{frame}
+
+\begin{frame}{Tools and approaches}
+Only within these frameworks can you use available tools and approaches - but we will introduce you to a range of them, customised to the disciplinary mix in the class.
+    \begin{itemize}[label=\textbullet]
+        \item Research design and project management
+        \item Data management planning
+        \item Data capture
+        \item Data analysis and collaboration
+        \item Data archiving and dissemination
+    \end{itemize}
+
+\end{frame}
+
+% \bibliographystyle{apalike}
+
+% Adding the option 'allowframebreaks' allows the contents of the slide to be expanded in more than one slide.
+% The "1" comes from the outer theme"
+
+\section{References}
+
+\begin{multicols}{2}[]
+\bibliography{references}
+\bibliographystyle{apalike}
+\end{multicols}
+
+
+% \begin{frame}[allowframebreaks]{References}
+  
+%   \bibliography{references}
+%   \bibliographystyle{apalike}
+% \end{frame}
+
+
+\begin{frame}{Thank you!}
+
+% This presentation is available at:
+% \texttt{https://osf.io/...}
+
+Source code for this presentation is available at: \texttt{https://github.com/saross/FOAR705}
+
+This work is licensed under a Creative Commons Attribution 4.0 International License.
+
+\end{frame}
+
+
+
+\end{document}
